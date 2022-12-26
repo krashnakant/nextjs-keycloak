@@ -1,0 +1,32 @@
+name: Build and publish nextjs keycloak package
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      NODE_VERSION: 18.x
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          scope: '@krashnakant'
+          registry-url: 'https://npm.pkg.github.com'
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+          npm publish .
+        env:
+          NODE_AUTH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}

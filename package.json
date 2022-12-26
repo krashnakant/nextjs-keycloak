@@ -2,11 +2,15 @@
   "name": "@krashnakant/next-keycloak",
   "description": "An authentication library based on Keycloak for NextJs applications",
   "author": "Krashna Chaurasia",
+  "repository": "https://github.com/krashnakant/nextjs-keycloak.git",
   "module": "dist/next-keycloak.esm.js",
-  "version": "2.0.2",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "files": [
     "dist",
     "src"
