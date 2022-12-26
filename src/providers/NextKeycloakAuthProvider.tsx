@@ -1,7 +1,6 @@
-import {
+import Keycloak, {
   KeycloakConfig,
   KeycloakInitOptions,
-  KeycloakInstance,
 } from 'keycloak-js';
 import React, { FC, useMemo } from 'react';
 import { useInitKeycloak } from '../hooks/UseInitialKeycloak';
@@ -12,6 +11,7 @@ import { NextKeycloakAuthContext } from './NextKeycloakAuthContext';
 interface IKeycloakAuthenticationProviderProps {
   config: KeycloakConfig;
   initOption?: KeycloakInitOptions;
+  children: React.ReactNode;
 }
 
 export const NextKeycloakAuthProvider: FC<IKeycloakAuthenticationProviderProps> = ({
@@ -23,7 +23,7 @@ export const NextKeycloakAuthProvider: FC<IKeycloakAuthenticationProviderProps> 
     return getKeycloakInstance(config);
   }, [config]);
   const initializedKeycloak = useInitKeycloak(
-    keycloak as KeycloakInstance,
+    keycloak as Keycloak,
     initOption
   );
   return (

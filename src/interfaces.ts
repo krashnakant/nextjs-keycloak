@@ -14,7 +14,7 @@ export interface INextKeycloakAuthContext {
   logout(options?: KeycloakLogoutOptions): void;
   register(options?: KeycloakRegisterOptions): void;
   accountManagement(): void;
-  // keycloakInstance?: KeycloakInstance;
+  hasRealmRole(role: string): boolean;
 }
 
 export interface INextKeycloakUser {

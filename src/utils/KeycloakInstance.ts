@@ -1,10 +1,12 @@
-import type { KeycloakConfig, KeycloakInstance } from "keycloak-js";
+import type { KeycloakConfig } from "keycloak-js";
 import { isServer } from "./Util";
+
 
 const Keycloak = !isServer() ? require("keycloak-js") : null;
 
+export type  Keycloak  = typeof Keycloak;
 // Global Keycloak instance
-let keycloakInstance: KeycloakInstance;
+let keycloakInstance  = Keycloak;
 
 /**
  * @description A function to create instance of Keycloak based on proper environment (server or client)
@@ -13,7 +15,7 @@ let keycloakInstance: KeycloakInstance;
  */
 export const getKeycloakInstance = (
   keycloakConfig: KeycloakConfig
-): KeycloakInstance | undefined => {
+): Keycloak | undefined => {
   const isServerSide = isServer();
 
   if (isServerSide) {

@@ -8,6 +8,7 @@ export const NextKeycloakAuthContext = createContext<INextKeycloakAuthContext>({
   login: _option => {},
   logout: _option => {},
   register: _option => {},
+  hasRealmRole: _option => false,
   accountManagement: () => {},
   // keycloakInstance: {} as KeycloakInstance,
 });

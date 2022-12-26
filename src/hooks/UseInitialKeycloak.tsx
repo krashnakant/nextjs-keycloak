@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import {
+import Keycloak, {
   KeycloakInitOptions,
-  KeycloakInstance,
   KeycloakLoginOptions,
   KeycloakLogoutOptions,
   KeycloakRegisterOptions,
@@ -13,13 +12,14 @@ import { getUserFromToken } from '../utils/Util';
  *
  * @description A hook to initialize and provide Keycloak functionalities
  * @param keycloakInstance
+ * @param initOption
  * @returns
  */
 export const useInitKeycloak = (
-  keycloakInstance: KeycloakInstance,
+  keycloakInstance: Keycloak,
   initOption: KeycloakInitOptions = {}
 ): INextKeycloakAuthContext => {
-  const [keycloak, setKeycloak] = useState<KeycloakInstance>();
+  const [keycloak, setKeycloak] = useState<Keycloak>();
 
   useEffect(() => {
     if (keycloakInstance) {
@@ -64,6 +64,13 @@ export const useInitKeycloak = (
     return;
   };
 
+  const hasRealmRole = (role: string): boolean => {
+    if (keycloak) {
+      return keycloak.hasRealmRole(role);
+    }
+    return false;
+  };
+
   return {
     loading: !(keycloak?.authenticated && keycloak.token !== undefined),
     token: keycloak ? keycloak.token : '',
@@ -74,6 +81,7 @@ export const useInitKeycloak = (
     login,
     logout,
     register,
+    hasRealmRole,
     accountManagement,
     // keycloakInstance: keycloak,
   };

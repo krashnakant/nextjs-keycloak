@@ -14,18 +14,18 @@ Use it as a react provider to authenticate keycloak users
 
 ## Requirements
 
-- [Keycloak.js](https://www.npmjs.com/package/keycloak-js) version **11** or above
-- React version **16** or above
-- NextJs version **10** or above
+- [Keycloak.js](https://www.npmjs.com/package/keycloak-js) version **20** or above
+- React version **17** or above
+- NextJs version **13** or above
 
 ## Installation
 
 Install package with this command
 
 ```shell
-npm i @elyash14/next-keycloak
+npm i @krashnakant/nextjs-keycloak
 or
-yarn add @elyash14/next-keycloak
+yarn add @krashnakant/nextjs-keycloak
 ```
 
 Make a config file in `_app.tsx` or `_app.jsx` and wrap your component with **NextKeycloakAuthProvider** like this:
@@ -71,11 +71,11 @@ And that's it... now you can use **useNextKeycloakAuth** in your pages and compo
 const {authenticated, loading } = useNextKeycloakAuth();
 ```
 
-See [this example](https://github.com/elyash14/next-keycloak/tree/main/example) for full example.
+See [this example](https://github.com/krashnakant/nextjs-keycloak/tree/main/example) for full example.
 
 ## Authors
 
-Elyas Mosayebi [@elyash14](https://github.com/elyash14)
+Krashna [@krashnakant](https://github.com/krashnakant/nextjs-keycloak)
 
 ## License
 
