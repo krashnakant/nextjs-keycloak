@@ -3,7 +3,7 @@ import {
   KeycloakLoginOptions,
   KeycloakLogoutOptions,
   KeycloakRegisterOptions,
-} from 'keycloak-js';
+} from "keycloak-js";
 
 export interface INextKeycloakAuthContext {
   loading: boolean;

@@ -1,2 +1,2 @@
-export * from './providers/NextKeycloakAuthProvider';
-export * from './hooks/UseNextKeycloakAuth';
+export * from "./providers/NextKeycloakAuthProvider";
+export * from "./hooks/UseNextKeycloakAuth";
