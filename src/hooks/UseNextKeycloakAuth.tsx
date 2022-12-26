@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { NextKeycloakAuthContext } from '../providers/NextKeycloakAuthContext';
+import { useContext } from "react";
+import { NextKeycloakAuthContext } from "../providers/NextKeycloakAuthContext";
 
 /**
  *

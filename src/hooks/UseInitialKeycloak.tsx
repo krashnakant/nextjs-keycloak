@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import Keycloak, {
   KeycloakInitOptions,
   KeycloakLoginOptions,
   KeycloakLogoutOptions,
   KeycloakRegisterOptions,
-} from 'keycloak-js';
-import { INextKeycloakAuthContext } from '../interfaces';
-import { getUserFromToken } from '../utils/Util';
+} from "keycloak-js";
+import { INextKeycloakAuthContext } from "../interfaces";
+import { getUserFromToken } from "../utils/Util";
 
 /**
  *
@@ -32,7 +32,7 @@ export const useInitKeycloak = (
       await keycloakInstance.init(initOption);
       setKeycloak(keycloakInstance);
     } catch (e) {
-      console.error('failed to initialize keycloak');
+      console.error("failed to initialize keycloak");
     }
   };
 
@@ -73,7 +73,7 @@ export const useInitKeycloak = (
 
   return {
     loading: !(keycloak?.authenticated && keycloak.token !== undefined),
-    token: keycloak ? keycloak.token : '',
+    token: keycloak ? keycloak.token : "",
     authenticated: keycloak ? Boolean(keycloak.authenticated) : false,
     userInfo: keycloak?.authenticated
       ? getUserFromToken(String(keycloak.token))
