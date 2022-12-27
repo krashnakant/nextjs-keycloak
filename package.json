@@ -4,7 +4,7 @@
   "author": "Krashna Chaurasia",
   "repository": "https://github.com/krashnakant/nextjs-keycloak.git",
   "module": "dist/krashnakant-next-keycloak.esm.js",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "main": "dist/krashnakant-next-keycloak.cjs.js",
   "typings": "dist/index.d.ts",
@@ -70,9 +70,5 @@
     "size-limit": "^8.1.0",
     "tslib": "^2.4.1",
     "typescript": "^4.9.4"
-  },
-  "peerDependencies": {
-    "keycloak-js": ">=11",
-    "react": ">=16"
   }
 }
