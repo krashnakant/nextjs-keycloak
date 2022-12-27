@@ -1,4 +1,4 @@
-import { useNextKeycloakAuth } from '../../.';
+import { useNextKeycloakAuth } from '@krashnakant/next-keycloak';
 
 const ProfilePage = () => {
   const { userInfo, loading, token, logout, hasRealmRole } = useNextKeycloakAuth();
