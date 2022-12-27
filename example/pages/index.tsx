@@ -1,7 +1,8 @@
 import { KeycloakLoginOptions } from 'keycloak-js';
 import { FC } from 'react';
 import Link from 'next/link';
-import { useNextKeycloakAuth } from '../../.';
+import { useNextKeycloakAuth } from '@krashnakant/next-keycloak';
+
 
 const HomePage = () => {
   return (
@@ -24,7 +25,7 @@ const ComponentOne: FC = () => {
         <>
           <span>User logged in view </span>
           <Link href="profile/">
-            <a>Profile</a>
+            Profile
           </Link>
         </>
       ) : (

@@ -1,6 +1,8 @@
 import { KeycloakConfig, KeycloakInitOptions } from "keycloak-js";
 import type { AppProps } from "next/app";
-import  {NextKeycloakAuthProvider}  from "../../.";
+import React from 'react';
+import { NextKeycloakAuthProvider } from '@krashnakant/next-keycloak';
+
 
 
 const config:KeycloakConfig = {
