@@ -4,7 +4,6 @@ import React from 'react';
 import { NextKeycloakAuthProvider } from "@krashnakant/next-keycloak";
 
 
-
 const config:KeycloakConfig = {
   realm: process.env.NEXT_PUBLIC_KEYCLOAK_REAM,
   url: process.env.NEXT_PUBLIC_KEYCLOAK_URL,

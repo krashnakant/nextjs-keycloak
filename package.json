@@ -3,13 +3,13 @@
   "description": "An authentication library based on Keycloak for NextJs applications",
   "author": "Krashna Chaurasia",
   "repository": "https://github.com/krashnakant/nextjs-keycloak.git",
-  "module": "dist/next-keycloak.esm.js",
-  "version": "1.0.0",
+  "module": "dist/krashnakant-next-keycloak.esm.js",
+  "version": "1.1.1",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "dist/krashnakant-next-keycloak.cjs.js",
   "typings": "dist/index.d.ts",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "files": [
     "dist",
@@ -26,50 +26,53 @@
     "Authentication"
   ],
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "start": "preconstruct dev",
+    "build": "preconstruct build",
+    "format": "prettier --write \"src/**/*.tsx\" \"test/**/*.tsx\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.tsx\" --fix",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
     }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "size-limit": [
     {
-      "path": "dist/next-keycloak.cjs.production.min.js",
+      "path": "dist/krashnakant-next-keycloak.cjs.prod.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/next-keycloak.esm.js",
+      "path": "dist/krashnakant-next-keycloak.esm.js",
       "limit": "10 KB"
     }
   ],
   "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@preconstruct/cli": "^2.2.2",
     "@size-limit/preset-small-lib": "^8.1.0",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
+    "keycloak-js": "^20.0.2",
+    "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "size-limit": "^8.1.0",
-    "tsdx": "^0.14.1",
     "tslib": "^2.4.1",
-    "typescript": "^4.9.4",
-    "keycloak-js": "^20.0.2"
+    "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "react": ">=16",
-    "keycloak-js": ">=11"
+    "keycloak-js": ">=11",
+    "react": ">=16"
   }
 }
