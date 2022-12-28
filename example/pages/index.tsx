@@ -24,7 +24,7 @@ const ComponentOne: FC = () => {
       {authenticated ? (
         <>
           <span>User logged in view </span>
-          <Link href="profile/">
+          <Link href='profile/'>
             Profile
           </Link>
         </>
