@@ -14,7 +14,7 @@ export const NextKeycloakAuthContext = createContext<INextKeycloakAuthContext>({
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
   register: (_option: KeycloakRegisterOptions) => {},
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
-  hasRealmRole: (_option:string) => false,
+  hasRealmRole: (_option: string) => false,
   // eslint-disable-next-line @typescript-eslint/no-empty-function,@typescript-eslint/no-unused-vars
   accountManagement: () => {},
   // keycloakInstance: {} as KeycloakInstance,
