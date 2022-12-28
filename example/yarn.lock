@@ -281,8 +281,8 @@
 
 "@krashnakant/next-keycloak@^1.0.0":
   version "1.1.2"
-  resolved "https://npm.pkg.github.com/download/@krashnakant/next-keycloak/1.1.2/2b466a091a8ca01a3b3ca6c08cf446da9cdd40be#2b466a091a8ca01a3b3ca6c08cf446da9cdd40be"
-  integrity sha512-ioSwhVVZOPXLxeDmP4EF+XtS9Jk9fN92h5CfPag9UoJuUFixOn2dYZMZxjVFBjCso8PZ+N6z5JupP1PgBEAB9A==
+  resolved "https://npm.pkg.github.com/download/@krashnakant/next-keycloak/1.1.2/08ff40126a72edc12cd6c493a5663d26b205a3c3#08ff40126a72edc12cd6c493a5663d26b205a3c3"
+  integrity sha512-zXCGEem+QgtKimvUPdtuM0NKgc9SPNb4ESNeS/z2LwRVTckiILwXg38FyGqpsjBTSzJAh/1QwUAkR9KDa7DxMw==
 
 "@next/env@13.1.1":
   version "13.1.1"

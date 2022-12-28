@@ -40,28 +40,28 @@ export const useInitKeycloak = (
     if (keycloak) {
       return keycloak.login(option);
     }
-    return;
+    return undefined;
   };
 
   const logout = (option: KeycloakLogoutOptions) => {
     if (keycloak !== undefined) {
       return keycloak.logout(option);
     }
-    return;
+    return undefined;
   };
 
   const register = (option: KeycloakRegisterOptions) => {
     if (keycloak) {
       return keycloak.register(option);
     }
-    return;
+    return undefined;
   };
 
   const accountManagement = () => {
     if (keycloak) {
       return keycloak.accountManagement();
     }
-    return;
+    return undefined;
   };
 
   const hasRealmRole = (role: string): boolean => {
