@@ -17,7 +17,7 @@ import { getUserFromToken } from '../utils/Util';
  */
 export const useInitKeycloak = (
   keycloakInstance: Keycloak,
-  initOption: KeycloakInitOptions = {}
+  initOption: KeycloakInitOptions = {},
 ): INextKeycloakAuthContext => {
   const [keycloak, setKeycloak] = useState<Keycloak>();
 

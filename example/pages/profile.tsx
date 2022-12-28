@@ -16,8 +16,8 @@ const ProfilePage = () => {
           </h3>
           <h3>{userInfo.email}</h3>
           <h3>{userInfo.sub}</h3>
-            <h3>{token}</h3>
-            <h3>{hasRealmRole('app-admin') === true ? 'true' : 'false'}</h3>
+          <h3>{token}</h3>
+          <h3>{hasRealmRole('app-admin') === true ? 'true' : 'false'}</h3>
           <button
             onClick={() => logout({ redirectUri: window.location.origin })}
           >
